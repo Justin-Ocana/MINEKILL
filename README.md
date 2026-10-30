@@ -13,6 +13,8 @@
 ![Tests](https://img.shields.io/badge/tests-55%20C%23%20%2B%20Java-brightgreen?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)
 
+[![Descargar](https://img.shields.io/github/v/release/Justin-Ocana/MINEKILL?label=%E2%AC%87%EF%B8%8F%20DESCARGAR&style=for-the-badge&color=ff3c00)](https://github.com/Justin-Ocana/MINEKILL/releases/latest)
+
 </div>
 
 ---
@@ -134,6 +136,8 @@ docs/MODLOG.md            Registro de decisiones y evidencias de cada fase
 ---
 
 ## 🛠️ Compilar e instalar
+
+> 💾 **¿Solo quieres jugar?** Descarga el plugin y el mod ya compilados desde **[Releases](https://github.com/Justin-Ocana/MINEKILL/releases/latest)**.
 
 > ⚠️ Necesitas tener **ULTRAKILL** y **Minecraft: Java Edition**. Este repo **no incluye ningún archivo de ninguno de los dos juegos**.
 
