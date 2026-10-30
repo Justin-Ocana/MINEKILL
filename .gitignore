@@ -1,0 +1,23 @@
+# Portable toolchain and downloads
+.tools/
+# Backups of the user's game files (never commit)
+backups/
+# Build output
+bin/
+obj/
+build/
+*.user
+.vs/
+# Game files must never be committed
+*Assembly-CSharp*.dll
+# This machine only
+tools/local.ps1
+docs/INFORME_TECNICO.md
+docs/PRUEBA_MVP0.md
+# Minecraft dev client: worlds, logs, caches (only the options file is ours)
+mcmod/.gradle/
+mcmod/run/*
+!mcmod/run/options.txt
+# Test captures can contain Minecraft's textures
+*.png
+!docs/img/*.png

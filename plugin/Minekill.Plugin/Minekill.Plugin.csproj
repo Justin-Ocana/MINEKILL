@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- MINEKILL's BepInEx 5 plugin for ULTRAKILL. Compiles against the user's own game install
+       (ULTRAKILL_DIR) and BepInEx package; neither is copied into the output or the repository. -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Minekill</AssemblyName>
+    <RootNamespace>Minekill</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>disable</Nullable>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <GameDir Condition="'$(GameDir)' == ''">$(ULTRAKILL_DIR)</GameDir>
+    <Managed>$(GameDir)\ULTRAKILL_Data\Managed</Managed>
+    <BepInExCore Condition="'$(BepInExCore)' == ''">$(MSBuildThisFileDirectory)..\..\.tools\bepinex-pkg\BepInEx\core</BepInExCore>
+    <PackageDir>$(MSBuildThisFileDirectory)..\..\build\plugin\Minekill</PackageDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\bridge\Minekill.Link\Minekill.Link.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BepInEx" HintPath="$(BepInExCore)\BepInEx.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="$(BepInExCore)\0Harmony.dll" Private="false" />
+    <Reference Include="Assembly-CSharp" HintPath="$(Managed)\Assembly-CSharp.dll" Private="false" />
+    <Reference Include="UnityEngine" HintPath="$(Managed)\UnityEngine.dll" Private="false" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="$(Managed)\UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="UnityEngine.PhysicsModule" HintPath="$(Managed)\UnityEngine.PhysicsModule.dll" Private="false" />
+    <Reference Include="UnityEngine.IMGUIModule" HintPath="$(Managed)\UnityEngine.IMGUIModule.dll" Private="false" />
+    <Reference Include="UnityEngine.TextRenderingModule" HintPath="$(Managed)\UnityEngine.TextRenderingModule.dll" Private="false" />
+    <Reference Include="UnityEngine.UI" HintPath="$(Managed)\UnityEngine.UI.dll" Private="false" />
+    <Reference Include="UnityEngine.UIModule" HintPath="$(Managed)\UnityEngine.UIModule.dll" Private="false" />
+    <Reference Include="UnityEngine.ImageConversionModule" HintPath="$(Managed)\UnityEngine.ImageConversionModule.dll" Private="false" />
+    <Reference Include="Unity.InputSystem" HintPath="$(Managed)\Unity.InputSystem.dll" Private="false" />
+  </ItemGroup>
+
+  <!-- Stage the two DLLs that get installed into BepInEx\plugins\Minekill\ (tools\install.ps1). -->
+  <Target Name="Stage" AfterTargets="Build">
+    <MakeDir Directories="$(PackageDir)" />
+    <Copy SourceFiles="$(TargetPath);$(TargetDir)Minekill.Link.dll" DestinationFolder="$(PackageDir)" />
+  </Target>
+</Project>

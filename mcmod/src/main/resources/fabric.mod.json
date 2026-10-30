@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "minekill",
+  "version": "${version}",
+  "name": "MINEKILL",
+  "description": "Minecraft's side of MINEKILL: links a Minecraft player to ULTRAKILL's V1.",
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.minekill.mc.MinekillClient"]
+  },
+  "mixins": ["minekill.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Shared-memory link between ULTRAKILL (host) and Minecraft (guest). No Unity or game
+       dependencies, so it is unit-tested outside the game. Byte layout follows SkyCraft's
+       protocol v11 (protocol/skycraft_protocol.h) so SkyCraft's Fabric mod can be the guest. -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>Minekill.Link</AssemblyName>
+    <RootNamespace>Minekill.Link</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+</Project>

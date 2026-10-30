@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Stand-in for ULTRAKILL: creates the link and moves a fake V1, so Minecraft's side can be
+       tested end to end without the game. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\bridge\Minekill.Link\Minekill.Link.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "dev.minekill.mc.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "AbstractClientPlayerMixin",
+    "InputConstantsMixin",
+    "LevelRendererMixin",
+    "LivingEntityMixin",
+    "MinecraftMixin",
+    "WaitingForPlayerChunkMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}

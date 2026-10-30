@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Stand-in for Minecraft: opens the link and follows the host's position, so the host side
+       (the ULTRAKILL plugin) can be tested without Minecraft running. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\bridge\Minekill.Link\Minekill.Link.csproj" />
+  </ItemGroup>
+</Project>
