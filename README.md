@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⛏️ MINEKILL 🩸
+#  MINEKILL 
 
 ### *Minecraft dentro de ULTRAKILL. De verdad.*
 
@@ -23,7 +23,7 @@
 
 MINEKILL **no** pega una ventana de Minecraft encima de ULTRAKILL. Ejecuta **los dos juegos a la vez** y los une por memoria compartida, para que cada uno haga lo que mejor sabe hacer:
 
-| 🩸 ULTRAKILL se encarga de... | ⛏️ Minecraft se encarga de... |
+|  ULTRAKILL se encarga de... |  Minecraft se encarga de... |
 |---|---|
 | El cuerpo, el nivel, los enemigos y la física | Los objetos, el inventario, la vida y el hambre |
 | Dibujar el mundo (los bloques usan su propio shader) | La mano, el objeto en mano y el HUD |
